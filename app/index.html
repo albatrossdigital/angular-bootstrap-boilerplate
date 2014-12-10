@@ -1,0 +1,140 @@
+<!doctype html>
+<html class="no-js" lang="en" ng-app="app">
+  <head ng-controller="metaInfoCtrl">
+    <meta charset="utf-8">
+    <meta property="og:image" content="http://FILLME!/images/shareimg.jpg" />
+    <meta property="og:url" content="http://FILLME!" />
+    <meta property="og:title" content="FILLME!" />
+    <meta property="og:description" content="FILLME!" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" ng-attr-content="{{metaDescription()}}" />
+    <meta name="keywords" ng-attr-content="{{metaKeywords()}}" />
+    <title ng-bind="pageTitle();">FILLME!</title>
+    <!-- build:css css/libraries.min.css -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css css/app.min.css -->
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/app_override.css">
+    <!-- endbuild -->
+    <script type="text/javascript">
+        /**
+         * Delayed loading of typekit scripts vs Flicker-free loading
+         * Source: https://www.farbeyondcode.com/Delayed-loading-of-typekit-scripts-vs-Flicker-free-loading-5-2304.html
+         * Avg. Load Time: 66ms; 91ms; 113ms
+         */
+        /* <![CDATA[ */ 
+        TypekitConfig = {
+            kitId: 'FILLME!'
+        };
+        (function() {
+            var tk = document.createElement('script');
+            tk.src = '//use.typekit.com/' + TypekitConfig.kitId + '.js';
+            tk.type = 'text/javascript';
+            tk.async = 'true';
+            tk.onload = tk.onreadystatechange = function() {
+                var rs = this.readyState;
+                if (rs && rs != 'complete' && rs != 'loaded') return;
+                try { Typekit.load(TypekitConfig); } catch (e) {}
+            };
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(tk, s);
+        })(); 
+        /* ]]> */
+    </script>
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'FILLME!', 'auto');
+    </script>
+  </head>
+  <body page-ready>
+    <div class="container page">
+        <nav class="navbar navbar-default" role="navigation">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#" ui-sref="home"><img alt="Home" Title="Home" src="../images/logo.png"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Link</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Link</a></li>
+              </ul>
+          </div><!-- /.container-fluid -->
+        </nav>
+
+        <main id="main" class="main" ui-view></main>
+
+        <footer class="footer clearfix">
+            <div class="pull-left">
+              <ul>
+                <li ui-sref-active="active"><a href="#" ui-sref="about">About</a></li>
+              </ul>
+            </div>
+            <div class="pull-right">
+                  Share <div class="share42init" ng-attr-data-url="{{$root.pageUrl}}" ng-attr-data-title="{{pageTitle()}}" ng-attr-data-image="{{$root.pageUrl}}/images/logo.png" data-icons-file="../../images/share42icons.png" ng-attr-data-description="{{metaDescription()}}"></div>
+                </div>
+            </div><!-- /.navbar-collapse -->
+        </footer>
+    </div><!-- /.page -->
+
+    <!-- build:js js/vendor/libraries.min.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-bindonce/bindonce.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js js/vendor/bootstrap.min.js -->
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
+    <!-- endbuild -->
+    <!-- build:js js/app.min.js -->
+    <script src="js/app.js"></script>
+    <!-- Providers -->
+    <script src="js/providers/metaInfo.js"></script>
+    <!-- Utilities -->
+    <script src="js/utilities/scrollTo.js"></script>
+    <!-- Routes -->
+    <script src="js/routes/pageRoutes.js"></script>
+    <!-- Controllers -->
+    <script src="js/controllers/metaInfoCtrl.js"></script>
+    <!-- Filters -->
+    <script src="js/filters/weightFilter.js"></script>
+    <!-- Directives -->
+    <script src="js/directives/pageReady.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

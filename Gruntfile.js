@@ -20,7 +20,6 @@ module.exports = function(grunt) {
 		sass: {
 			options: {
 				includePaths: [
-				  '<%= app %>/bower_components/foundation/scss',
 				  '<%= app %>/bower_components/bootstrap-sass-official/assets/stylesheets',
           '<%= app %>/bower_components/bourbon/dist'
 				]

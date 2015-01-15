@@ -4655,7 +4655,8 @@ to prevent collapsing during animation*/
   min-height: 200px; }
 
 .transform.ng-enter, .transform.ng-enter-active, .transform.gn-leave, .transform.ng-leave-active {
-  overflow: hidden; }
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.5); }
 
 .transform.ng-enter {
   z-index: 2; }
